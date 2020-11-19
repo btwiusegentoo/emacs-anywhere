@@ -38,6 +38,7 @@ fi
 
 if [ "$EA_SHOULD_COPY" = true ]; then
     xclip -selection primary /tmp/eaclipboard
+    xclip -selection clipboard /tmp/eaclipboard
     rm /tmp/eaclipboard
 fi
 
