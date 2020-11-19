@@ -37,12 +37,12 @@ if [ "$EA_ABORT" = true ]; then
 fi
 
 if [ "$EA_SHOULD_COPY" = true ]; then
-    xclip -selection clipboard /tmp/eaclipboard
+    xclip -selection primary /tmp/eaclipboard
     rm /tmp/eaclipboard
 fi
 
 xdotool windowactivate --sync $EA_WINDOW
 
 if [ "$EA_SHOULD_PASTE" = true ]; then
-    xdotool type "$(xclip -o -selection clipboard)"
+    xdotool key --clearmodifiers Shift+Insert
 fi
