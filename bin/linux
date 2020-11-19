@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 EA_WINDOW=$( xdotool getactivewindow )
 

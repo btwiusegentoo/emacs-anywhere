@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 EA_APP_NAME=$( osascript \
                    -e 'tell application "System Events"' \
