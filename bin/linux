@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EA_WINDOW=$( xdotool getactivewindow )
+EA_WINDOW=$( xdotool getactivewindow || xdotool getwindowfocus)
 
 EA_APP_NAME=$( xprop -id $EA_WINDOW WM_CLASS | grep -oE '[^ ]+$' )
 EA_WINDOW_TITLE=$( xprop -id $EA_WINDOW _NET_WM_NAME | cut -d" " -f3- )
